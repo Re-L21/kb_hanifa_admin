@@ -71,8 +71,7 @@ db.connect((err) => {
     })
 
     app.post("/updateProcess", (req, res) => {
-        const updateSql = `update home set process_paragraph = '${req.body.prosesDetail}', 
-                        process1 = '${req.body.detail1}', process2 = '${req.body.detail2}', process3 = '${req.body.detail3}', process4 = '${req.body.detail4}' where id_home = '1';`
+        const updateSql = `update home set process_paragraph = '${req.body.prosesDetail}' where id_home = '1';`
 
         db.query(updateSql, (err, result) => {
             if (err) throw err;
