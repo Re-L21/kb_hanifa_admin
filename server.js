@@ -21,7 +21,7 @@ db.connect((err) => {
 
     if (err) throw err;
 
-    console.log("db conect");
+    console.log("database is currently running...");
 
     app.get("/", (req, res) => {
         const home = "SELECT * FROM home";
