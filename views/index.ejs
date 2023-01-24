@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="/css/materialize.min.css" media="screen,projection" />
+    <link type="text/css" rel="stylesheet" href="/css/custom.css" media="screen,projection" />
+
+    <title>Admin Page</title>
+
+</head>
+
+<body class="content">
+
+    <nav id="navbar" class="background-color-change">
+        <div class="nav-wrapper custom-container">
+            <a href="#" class="brand-logo center">KB HANIFA</a>
+        </div>
+    </nav>
+
+    <!-- Trigger/Open The About Modal -->
+    <button class="button-container large-txt" id="about-button">
+        "About Us"
+    </button>
+
+    <!-- The Modal -->
+    <div id="about-Modal" class="modals">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span class="close">&times;</span>
+
+            <form action="/updateAbout" method="post" class="custom-container">
+                <h3>Update "About Us"</h3>
+
+                <label for="about">Detail About </label>
+                <textarea name="about"></textarea>
+
+                <input type="submit" class="btn" value="Update">
+            </form>
+
+        </div>
+
+    </div>
+
+    <!-- Trigger/Open The Guru Modal -->
+    <button class="button-container large-txt" id="guru-button">
+        "Guru"
+    </button>
+
+    <!-- The Modal -->
+    <div id="guru-Modal" class="modals">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span class="close">&times;</span>
+
+            <form action="/updateGuru" method="post" class="custom-container">
+                <h3>Update "Guru"</h3>
+
+                <label for="guru1">Nama Guru Pertama</label>
+                <input type="text" name="guru1"></input>
+
+                <label for="guru2">Nama Guru Ke Dua</label>
+                <input type="text" name="guru2"></input>
+
+                <label for="guru3">Nama Guru Ke Tiga</label>
+                <input type="text" name="guru3"></input>
+
+                <label for="guru4">Nama Guru Ke Empat</label>
+                <input type="text" name="guru4"></input>
+
+                <input type="submit" class="btn" value="Update">
+            </form>
+        </div>
+
+    </div>
+
+    <!-- Trigger/Open The Vision Modal -->
+    <button class="button-container large-txt" id="vision-button">
+        "Vision"
+    </button>
+
+    <!-- The Modal -->
+    <div id="vision-Modal" class="modals">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span class="close">&times;</span>
+
+            <form action="/updateVision" method="post" class="custom-container">
+                <h3>Update "Vision"</h3>
+                
+                <label for="vision">Vision</label>
+                <textarea name="vision"></textarea>
+
+                <input type="submit" class="btn" value="Update">
+            </form>
+        </div>
+
+    </div>
+
+    <!-- Trigger/Open The Mission Modal -->
+    <button class="button-container large-txt" id="mission-button">
+        "Mission"
+    </button>
+
+    <!-- The Modal -->
+    <div id="mission-Modal" class="modals">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span class="close">&times;</span>
+
+            <form action="/updateMission" method="post" class="custom-container">
+                <h3>Update "Mission"</h3>
+
+                <label for="mission1">Misi Pertama</label>
+                <input type="text" name="mission1"></input>
+
+                <label for="mission2">Misi Ke Dua</label>
+                <input type="text" name="mission2"></input>
+
+                <label for="mission3">Misi Ke Tiga</label>
+                <input type="text" name="mission3"></input>
+
+                <input type="submit" class="btn" value="Update">
+            </form>
+        </div>
+
+    </div>
+
+    <!-- Trigger/Open The Process Modal -->
+    <button class="button-container large-txt" id="process-button">
+        "Process"
+    </button>
+
+    <!-- The Modal -->
+    <div id="process-Modal" class="modals">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span class="close">&times;</span>
+
+            <form action="/updateProcess" method="post" class="custom-container">
+                <h3>Update "Process"</h3>
+
+                <label for="prosesDetail">Detail Proses</label>
+                <textarea type="text" name="prosesDetail"></textarea>
+
+                <label for="detail1">Proses Pertama</label>
+                <input type="text" name="detail1"></input>
+
+                <label for="detail2">Proses Ke Dua</label>
+                <input type="text" name="detail2"></input>
+
+                <label for="detail3">Proses Ke Tiga</label>
+                <input type="text" name="detail3"></input>
+
+                <label for="detail4">Proses Ke Empat</label>
+                <input type="text" name="detail4"></input>
+
+                <input type="submit" class="btn" value="Update">
+            </form>
+        </div>
+
+    </div>
+
+    <script>
+        // Get the modal
+        var about_modal = document.getElementById("about-Modal");
+        var guru_modal = document.getElementById("guru-Modal");
+        var vision_modal = document.getElementById("vision-Modal");
+        var mission_modal = document.getElementById("mission-Modal");
+        var process_modal = document.getElementById("process-Modal");
+
+        // Get the button that opens the modal
+        var about_btn = document.getElementById("about-button");
+        var guru_btn = document.getElementById("guru-button");
+        var vision_btn = document.getElementById("vision-button");
+        var mission_btn = document.getElementById("mission-button");
+        var process_btn = document.getElementById("process-button");
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // When the user clicks the button, open the modal 
+        about_btn.onclick = function () {
+            about_modal.style.display = "block";
+        }
+
+        guru_btn.onclick = function () {
+            guru_modal.style.display = "block";
+        }
+
+        vision_btn.onclick = function () {
+            vision_modal.style.display = "block";
+        }
+
+        mission_btn.onclick = function () {
+            mission_modal.style.display = "block";
+        }
+
+        process_btn.onclick = function () {
+            process_modal.style.display = "block";
+        }
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function () {
+            about_modal.style.display = "none";
+        }
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function (event) {
+            if (event.target == about_modal) {
+                about_modal.style.display = "none";
+            } else if (event.target == guru_modal) {
+                guru_modal.style.display = "none";
+            } else if (event.target == vision_modal) {
+                vision_modal.style.display = "none";
+            } else if (event.target == mission_modal) {
+                mission_modal.style.display = "none";
+            } else if (event.target == process_modal) {
+                process_modal.style.display = "none";
+            }
+        }
+
+    </script>
+
+</body>
+
+</html>
